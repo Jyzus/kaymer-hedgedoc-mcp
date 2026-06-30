@@ -10,11 +10,17 @@ Create notes and Mermaid diagrams from OpenCode and other MCP-compatible AI agen
 
 | Tool | Description |
 |---|---|
+| `hedgedoc_create_blank` | Create a blank note with the instance's default template |
 | `hedgedoc_create` | Create a new note with a random ID |
 | `hedgedoc_create_with_alias` | Create a new note with a custom URL alias (requires [FreeURL mode](https://docs.hedgedoc.org/references/url-scheme/#freeurl-mode)) |
-| `hedgedoc_read` | Read the raw markdown content of a note |
-| `hedgedoc_info` | Get note metadata (title, description, timestamps) |
 | `hedgedoc_create_diagram` | Create a note with a [Mermaid](https://mermaid.js.org/) diagram |
+| `hedgedoc_read` | Read the raw markdown content of a note |
+| `hedgedoc_info` | Get note metadata (title, description, timestamps, viewcount) |
+| `hedgedoc_list_revisions` | List all available revisions of a note |
+| `hedgedoc_get_revision` | Get the full content of a specific revision |
+| `hedgedoc_publish_url` | Get the published (read-only) URL of a note |
+| `hedgedoc_slide_url` | Get the slide presentation URL of a note |
+| `hedgedoc_status` | Get the current status of the HedgeDoc instance |
 
 ## Usage
 
@@ -58,10 +64,16 @@ This server uses the following [HedgeDoc 1.x API](https://docs.hedgedoc.org/dev/
 
 | Method | Endpoint | Used by |
 |---|---|---|
+| `GET` | `/new` | Create a blank note |
 | `POST` | `/new` | Create a note (random ID) |
 | `POST` | `/new/{alias}` | Create a note (custom alias) |
 | `GET` | `/{id}/download` | Read raw markdown |
 | `GET` | `/{id}/info` | Read metadata |
+| `GET` | `/{id}/revision` | List revisions |
+| `GET` | `/{id}/revision/{rev}` | Get specific revision |
+| `GET` | `/{id}/publish` | Published URL |
+| `GET` | `/{id}/slide` | Slide URL |
+| `GET` | `/status` | Instance status |
 
 For more details, see the [official API docs](https://docs.hedgedoc.org/dev/api/).
 

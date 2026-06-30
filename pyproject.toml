@@ -1,6 +1,6 @@
 [project]
 name = "hedgedoc-mcp-server"
-version = "0.2.0"
+version = "0.3.0"
 description = "MCP server for HedgeDoc 1.x — create collaborative markdown notes with Mermaid diagrams"
 readme = "README.md"
 requires-python = ">=3.11"
