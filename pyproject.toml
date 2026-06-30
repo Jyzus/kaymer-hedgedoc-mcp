@@ -27,8 +27,8 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/julian-agama/hedgedoc-mcp-server"
-Repository = "https://github.com/julian-agama/hedgedoc-mcp-server"
+Homepage = "https://github.com/Jyzus/kaymer-hedgedoc-mcp"
+Repository = "https://github.com/Jyzus/kaymer-hedgedoc-mcp"
 
 [project.scripts]
 hedgedoc-mcp-server = "hedgedoc_mcp_server:main"
